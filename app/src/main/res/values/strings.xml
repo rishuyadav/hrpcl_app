@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">hrpcl_app</string>
+    <string name="complete_your_profile">Complete your Profile</string>
+    <string name="adding_these_details_will_help_us_better_understand_your_medical_condition">Adding these details will help us better understand your medical condition.</string>
+    <string name="next">Next</string>
+    <string name="cm">Cm</string>
+    <string name="profile_complete">Profile Complete</string>
+    <string name="congrats_your_profile_has_been_completed_successfully">Congrats! Your profile has been completed successfully.</string>
+    <string name="okay">Okay</string>
+</resources>

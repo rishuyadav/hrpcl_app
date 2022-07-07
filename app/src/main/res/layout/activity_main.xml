@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/complete_your_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/inter"
+        android:text="@string/complete_your_profile"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/subheading"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/complete_your_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/adding_these_details_will_help_us_better_understand_your_medical_condition"
+        android:textSize="20sp"
+        android:alpha="0.7"
+        android:fontFamily="@font/assistant_regular"
+        android:textColor="@color/black"
+
+        />
+    <com.kevalpatel2106.rulerpicker.RulerValuePicker
+        app:layout_constraintTop_toBottomOf="@id/subheading"
+        app:layout_goneMarginTop="88dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:id="@+id/ruler_picker"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        app:indicator_color="@android:color/black"
+        app:indicator_interval="14dp"
+        app:indicator_width="2dp"
+        app:max_value="240"
+        app:min_value="145"
+        app:ruler_text_color="@color/black"
+        app:notch_color="#029D94"
+        app:ruler_text_size="6sp"/>
+
+    <TextView
+        android:layout_width="80dp"
+        android:id="@+id/currentCM"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ruler_picker"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="145"
+        android:background="@drawable/textbg"
+        android:fontFamily="@font/inter"
+        android:padding="5dp"
+        android:textAlignment="center"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/currentCM"
+        app:layout_constraintTop_toTopOf="@id/currentCM"
+        android:text="@string/cm"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/hrpgreen"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/currentCM"
+        android:layout_marginLeft="5dp"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="280dp"
+        android:id="@+id/next"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="100dp"
+        android:backgroundTint="@color/hrpgreen"
+        android:text="@string/next"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+<!--    <com.elsunhoty.rulerpicker.lib.RulerView-->
+<!--        android:background="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.13"-->
+<!--        app:ruler_hash_mark_distance="10dp"-->
+<!--        app:ruler_hash_mark_interval="10"-->
+<!--        app:ruler_indicator_color="#029D94"-->
+<!--        app:ruler_indicator_height="60dp"-->
+<!--        app:ruler_indicator_width="3dp"-->
+<!--        app:ruler_long_hash_mark_color="#000000"-->
+<!--        app:ruler_long_hash_mark_height="34dp"-->
+<!--        app:ruler_long_hash_mark_text_color="#BFBFBF"-->
+<!--        app:ruler_long_hash_mark_text_margin_top="14dp"-->
+<!--        app:ruler_long_hash_mark_text_size="12sp"-->
+<!--        app:ruler_long_hash_mark_width="2dp"-->
+<!--        app:ruler_max_value="300"-->
+<!--        app:ruler_small_hash_mark_color="#00000080"-->
+<!--        app:ruler_small_hash_mark_height="16dp"-->
+<!--        app:ruler_small_hash_mark_width="1dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
