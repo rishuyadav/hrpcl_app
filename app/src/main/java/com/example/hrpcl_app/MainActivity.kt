@@ -18,9 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.rulerPicker.setValuePickerListener(object : RulerValuePickerListener {
             override fun onValueChange(value: Int) {
-                //Value changed and the user stopped scrolling the ruler.
-                //You can consider this value as final selected value.
-//Optional parameters
                 val editor = getSharedPreferences(
                     "SHARED_PREF_1", MODE_PRIVATE
                 ).edit()
@@ -29,14 +26,15 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onIntermediateValueChange(selectedValue: Int) {
-                //Value changed but the user is still scrolling the ruler.
-                //This value is not final value. You can utilize this value to display the current selected value.
-                binding.currentCM.setText("$selectedValue") //Display   the current selected value  and
+                binding.currentCM.setText("$selectedValue")
             }
         })
         binding.next.setOnClickListener {
             val bottom_sheet = bottom_sheet(this)
             bottom_sheet.show()
+        }
+        binding.backButton.setOnClickListener{
+            finish()
         }
     }
 }

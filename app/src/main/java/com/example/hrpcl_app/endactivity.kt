@@ -13,11 +13,8 @@ class endactivity : AppCompatActivity() {
 
         val txt = findViewById<TextView>(R.id.value)
         val prefs = getSharedPreferences("SHARED_PREF_1", MODE_PRIVATE)
-        val value = prefs.getInt("height",0)
-        txt.setText(value.toString()+" Cm")
-
-
-
+        val value = prefs.getInt("height", 0)
+        txt.setText(value.toString() + " Cm")
 
     }
 
