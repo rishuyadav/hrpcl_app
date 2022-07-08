@@ -1,10 +1,11 @@
 package com.example.hrpcl_app
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.hrpcl_app.databinding.ActivityMainBinding
 import com.kevalpatel2106.rulerpicker.RulerValuePickerListener
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -19,6 +20,12 @@ class MainActivity : AppCompatActivity() {
             override fun onValueChange(value: Int) {
                 //Value changed and the user stopped scrolling the ruler.
                 //You can consider this value as final selected value.
+//Optional parameters
+                val editor = getSharedPreferences(
+                    "SHARED_PREF_1", MODE_PRIVATE
+                ).edit()
+                editor.putInt("height", value);
+                editor.commit();
             }
 
             override fun onIntermediateValueChange(selectedValue: Int) {
@@ -27,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 binding.currentCM.setText("$selectedValue") //Display   the current selected value  and
             }
         })
-        binding.next.setOnClickListener{
+        binding.next.setOnClickListener {
             val bottom_sheet = bottom_sheet(this)
             bottom_sheet.show()
         }

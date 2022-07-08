@@ -7,4 +7,6 @@
     <string name="profile_complete">Profile Complete</string>
     <string name="congrats_your_profile_has_been_completed_successfully">Congrats! Your profile has been completed successfully.</string>
     <string name="okay">Okay</string>
+    <string name="saved_value">Saved Value</string>
+    <string name="_0">0</string>
 </resources>
